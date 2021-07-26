@@ -50,6 +50,7 @@
         "properties": {
 			"securityRules": [
                 {
+                    
                     "name": "nsgRule1",
                     "properties": {
                         "description": "description",
