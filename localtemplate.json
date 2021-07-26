@@ -17,9 +17,7 @@
           "relativePath": "linkedtemplate.json"
         },
         "parameters": {
-          "storageAccountName": {
-            "value": "tetstorazshilpa12"
-          },
+         
           "location": {
             "value": "westus"
           }
@@ -38,7 +36,7 @@
         "properties": {
             "publicIPAllocationMethod": "Dynamic",
             "dnsSettings": {
-                "domainNameLabel": "[toLower('mynewvm1290')]"
+                "domainNameLabel": "[toLower('mynewvm120')]"
             }
         }
     },
@@ -129,7 +127,7 @@
         }
 		},
     {
-        "name": "mynewvm123",
+        "name": "mynewvm120",
         "type": "Microsoft.Compute/virtualMachines",
         "apiVersion": "2019-07-01",
         "location": "[resourceGroup().location]",
@@ -145,7 +143,7 @@
                 "vmSize": "Standard_B1s"
             },
             "osProfile": {
-                "computerName": "mynewvm12",
+                "computerName": "mynewvm1",
                 "adminUsername": "adminUsername",
                 "adminPassword": "Random1234$$"
             },
@@ -157,7 +155,7 @@
                     "version": "latest"
                 },
                 "osDisk": {
-                    "name": "mynewvmOSDisk",
+                    "name": "mynewvmOSDisk1",
                     "caching": "ReadWrite",
                     "createOption": "FromImage"
                 }
