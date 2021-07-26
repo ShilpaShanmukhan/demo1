@@ -26,7 +26,7 @@
       
     },
 	{
-        "name": "mynewvm-PublicIP12",
+        "name": "mynewvm-PublicIP123",
         "type": "Microsoft.Network/publicIPAddresses",
         "apiVersion": "2019-11-01",
         "location": "[resourceGroup().location]",
@@ -41,7 +41,7 @@
         }
     },
     {
-        "name": "mynewvm-nsg12",
+        "name": "mynewvm-nsg123",
         "type": "Microsoft.Network/networkSecurityGroups",
         "apiVersion": "2018-08-01",
         "location": "[resourceGroup().location]",
@@ -68,12 +68,12 @@
         }
     },
     {
-        "name": "mynewvm-VirtualNetwork12",
+        "name": "mynewvm-VirtualNetwork123",
         "type": "Microsoft.Network/virtualNetworks",
         "apiVersion": "2019-11-01",
 		"location": "[resourceGroup().location]",
         "dependsOn": [
-            "[resourceId('Microsoft.Network/networkSecurityGroups', 'mynewvm-nsg12')]"
+            "[resourceId('Microsoft.Network/networkSecurityGroups', 'mynewvm-nsg123')]"
         ],
         "tags": {
             "displayName": "mynewvm-VirtualNetwork"
@@ -86,11 +86,11 @@
             },
             "subnets": [
                 {
-                    "name": "mynewvm-VirtualNetwork-Subnet12",
+                    "name": "mynewvm-VirtualNetwork-Subnet123",
                     "properties": {
                         "addressPrefix": "10.0.0.0/24",
                         "networkSecurityGroup": {
-							"id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'mynewvm-nsg12')]"
+							"id": "[resourceId('Microsoft.Network/networkSecurityGroups', 'mynewvm-nsg123')]"
                         }
                     }
                 }
@@ -98,13 +98,13 @@
         }
     },
     {
-        "name": "mynewvm-NetworkInterface12",
+        "name": "mynewvm-NetworkInterface123",
         "type": "Microsoft.Network/networkInterfaces",
         "apiVersion": "2019-11-01",
         "location": "[resourceGroup().location]",
         "dependsOn": [
-            "[resourceId('Microsoft.Network/publicIPAddresses', 'mynewvm-PublicIP12')]",
-            "[resourceId('Microsoft.Network/virtualNetworks', 'mynewvm-VirtualNetwork12')]"
+            "[resourceId('Microsoft.Network/publicIPAddresses', 'mynewvm-PublicIP123')]",
+            "[resourceId('Microsoft.Network/virtualNetworks', 'mynewvm-VirtualNetwork123')]"
         ],
         "tags": {
             "displayName": "mynewvm Network Interface"
@@ -116,10 +116,10 @@
                     "properties": {
                         "privateIPAllocationMethod": "Dynamic",
                         "publicIPAddress": {
-                            "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'mynewvm-PublicIP12')]"
+                            "id": "[resourceId('Microsoft.Network/publicIPAddresses', 'mynewvm-PublicIP123')]"
                         },
                         "subnet": {
-                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets','mynewvm-VirtualNetwork12', 'mynewvm-VirtualNetwork-Subnet12')]"
+                            "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets','mynewvm-VirtualNetwork123', 'mynewvm-VirtualNetwork-Subnet123')]"
                         }
                     }
                 }
@@ -133,7 +133,7 @@
         "location": "[resourceGroup().location]",
         "dependsOn": [
           
-            "[resourceId('Microsoft.Network/networkInterfaces', 'mynewvm-NetworkInterface12')]"
+            "[resourceId('Microsoft.Network/networkInterfaces', 'mynewvm-NetworkInterface123')]"
         ],
         "tags": {
             "displayName": "mynewvm12"
@@ -163,7 +163,7 @@
             "networkProfile": {
                 "networkInterfaces": [
                     {
-                        "id": "[resourceId('Microsoft.Network/networkInterfaces', 'mynewvm-NetworkInterface12')]"
+                        "id": "[resourceId('Microsoft.Network/networkInterfaces', 'mynewvm-NetworkInterface123')]"
                     }
                 ]
             }
