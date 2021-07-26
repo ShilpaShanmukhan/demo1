@@ -36,7 +36,7 @@
         "properties": {
             "publicIPAllocationMethod": "Dynamic",
             "dnsSettings": {
-                "domainNameLabel": "[toLower('mynewvm120')]"
+                "domainNameLabel": "[toLower('mynewvm1223')]"
             }
         }
     },
@@ -127,7 +127,7 @@
         }
 		},
     {
-        "name": "mynewvm120",
+        "name": "mynewvm1223",
         "type": "Microsoft.Compute/virtualMachines",
         "apiVersion": "2019-07-01",
         "location": "[resourceGroup().location]",
