@@ -14,11 +14,11 @@
       "properties": {
         "mode": "Incremental",
         "templateLink": {
-          "uri":"https://raw.githubusercontent.com/ShilpaShanmukhan/demo1/master/linkedtemplate.json"
+          "relativePath": "linkedtemplate.json"
         },
         "parameters": {
           "storageAccountName": {
-            "value": "test123shilpa28"
+            "value": "tetstorazshilpa12"
           },
           "location": {
             "value": "westus"
@@ -38,7 +38,7 @@
         "properties": {
             "publicIPAllocationMethod": "Dynamic",
             "dnsSettings": {
-                "domainNameLabel": "[toLower('mynewvm1237')]"
+                "domainNameLabel": "[toLower('mynewvm1290')]"
             }
         }
     },
@@ -50,7 +50,8 @@
         "properties": {
 			"securityRules": [
                 {
-                    
+
+
                     "name": "nsgRule1",
                     "properties": {
                         "description": "description",
@@ -62,6 +63,7 @@
                         "access": "Allow",
                         "priority": 100,
                         "direction": "Inbound"
+
                     }
                 }
             ]
